@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reference</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    .profile-photo {
+      width: 400px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #007bff;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .info {
+      text-align: left;
+      margin-top: 20px;
+      font-size: 17px;
+      color: #222;
+    }
+    .contact {
+      margin-top: 25px;
+      font-size: 16px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="reference_profile.webp" alt="Reference Profile Photo" class="profile-photo" id="referenceProfilePic" style="width:180px;height:120px;">
+    <!-- Replace 'reference_profile.webp' with your actual photo filename -->
+    <h2>About Me Reference</h2>
+    <div class="info">
+      <strong>Name:</strong> Pradeep Kumar Suresh<br>
+      <strong>Role:</strong> 2rd-year Computer Science Student<br>
+      <strong>College:</strong> Vinayaka Mission’s Kirupananda Variyar Engineering College<br>
+      <strong>Skills:</strong> Web Development, Python,  Database Management<br>
+      <strong>Interests:</strong> Building interactive websites, mobile app development, participating in hackathons, and learning new programming languages.<br>
+      <strong>Goals:</strong> To become a full-stack developer and contribute to open-source projects.<br>
+    </div>
+    <div class="contact">
+      <strong>Email:</strong> <a href="pradeepsuresh103@gmail.com" target="_blank">pradeepsuresh103.com</a><br>
+      <strong>GitHub:</strong> <a href="https://github.com/pradeeprosy" target="_blank">github.com/pradeeprosy</a><br>
+      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pradeep-kumar-suresh-544075343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/pradeep-kumar-suresh</a>
+    </div>
+  </div>
+
+  <!-- Modal for reference profile photo -->
+  <div id="refModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;">
+    <img src="reference_profile.webp" alt="Reference Profile Photo" style="max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,0.3);">
+  </div>
+  <script>
+    const refProfilePic = document.getElementById('referenceProfilePic');
+    const refModal = document.getElementById('refModal');
+    refProfilePic.style.cursor = "pointer";
+    refProfilePic.onclick = function() {
+      refModal.style.display = "flex";
+    };
+    refModal.onclick = function() {
+      refModal.style.display = "none";
+    };
+  </script>
+</body>
+</html>
